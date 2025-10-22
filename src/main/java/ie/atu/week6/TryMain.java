@@ -11,6 +11,17 @@ public class TryMain
         while(true)
         {
             System.out.println("enter your age: ");
+            String text = sc.nextLine().trim();
+            try
+            {
+                age = Integer.parseInt(text);
+                System.out.println("Thanks you've entered age = " + age);
+                break;
+            }
+            catch(NumberFormatException e)
+            {
+             System.out.println("Invalid age" + e.getMessage());
+            }
 
 
         }
